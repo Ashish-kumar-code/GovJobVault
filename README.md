@@ -225,8 +225,8 @@ GovJobVault/
 
 **Ashish Choubey**
 
-- GitHub: [@your-github](https://github.com/your-github)
-- LinkedIn: [your-linkedin](https://linkedin.com/in/your-linkedin)
+- GitHub: [Ashish-kumar-code](https://github.com/Ashish-kumar-code)
+- LinkedIn: [Ashish Kumar](https://www.linkedin.com/in/ashish-kumar-0552a32ab/)
 
 ---
 
