@@ -3,15 +3,15 @@ spring:
     name: GovJobVault
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/GovJobvault
-    username: postgres
-    password: password
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/GovJobvault}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:password}
     driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
+    show-sql: ${SHOW_SQL:true}
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
@@ -23,12 +23,12 @@ spring:
       max-request-size: 5MB
 
 jwt:
-  secret: GovJobVaultSecretKeyMustBeAtLeast32CharactersLong2026
-  expiration: 86400000
+  secret: ${JWT_SECRET:R292Sm9iVmF1bHRTZWNyZXRLZXlNdXN0QmVBdExlYXN0MzJDaGFyYWN0ZXJzTG9uZzIwMjY=}
+  expiration: ${JWT_EXPIRATION:86400000}
 
 server:
-  port: 8080
+  port: ${PORT:8080}
 
 logging:
   level:
-    com.govjobvault: DEBUG
+    com.govjobvault: ${LOG_LEVEL:DEBUG}

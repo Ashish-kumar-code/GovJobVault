@@ -54,7 +54,12 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOriginPatterns(List.of("http://localhost:5173", "chrome-extension://*"));
+        config.setAllowedOriginPatterns(List.of(
+            "http://localhost:5173",         // Local dev
+            "https://*.vercel.app",          // Production frontend (Vercel)
+            "https://*.onrender.com",        // Render preview URLs
+            "chrome-extension://*"           // Browser extension
+        ));
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
