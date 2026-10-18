@@ -1,0 +1,7 @@
+/* content.css is intentionally minimal — all widget styling is inside Shadow DOM */
+/* This file just defines the host container positioning */
+#gjv-widget-host {
+  position: fixed !important;
+  z-index: 2147483647 !important;
+  font-family: 'Segoe UI', system-ui, sans-serif !important;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GovJobVault</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Login View -->
+    <div id="login-view" class="view">
+      <div class="logo-section">
+        <div class="logo-icon">G</div>
+        <h1>GovJobVault</h1>
+        <p class="subtitle">Sign in to access your profiles</p>
+      </div>
+      <div id="login-error" class="error-msg hidden"></div>
+      <form id="login-form">
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@example.com" required />
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="••••••••" required />
+        </div>
+        <button type="submit" id="login-btn" class="btn-primary">
+          <span id="login-text">Sign In</span>
+          <span id="login-loading" class="hidden">Signing in...</span>
+        </button>
+      </form>
+    </div>
+
+    <!-- Dashboard View -->
+    <div id="dashboard-view" class="view hidden">
+      <div class="header">
+        <div class="header-left">
+          <div class="logo-icon-sm">G</div>
+          <div>
+            <h2 id="user-name">User</h2>
+            <p class="user-email" id="user-email">user@email.com</p>
+          </div>
+        </div>
+        <button id="logout-btn" class="btn-link-danger" title="Logout">⎋</button>
+      </div>
+
+      <div class="profile-section">
+        <label for="profile-select">Active Profile</label>
+        <select id="profile-select"></select>
+      </div>
+
+      <div id="profile-summary" class="profile-summary"></div>
+
+      <div class="actions">
+        <button id="refresh-btn" class="btn-secondary">↻ Refresh Profiles</button>
+      </div>
+
+      <p class="footer-text">Widget appears on all pages. Click the floating button to expand.</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

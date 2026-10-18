@@ -1,0 +1,94 @@
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+body {
+  width: 340px;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+}
+#app { padding: 20px; }
+
+/* ── Views ── */
+.view { transition: opacity 0.2s; }
+.hidden { display: none !important; }
+
+/* ── Logo ── */
+.logo-section { text-align: center; margin-bottom: 20px; }
+.logo-icon {
+  width: 48px; height: 48px; background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border-radius: 12px; color: #fff; font-size: 24px; font-weight: 700;
+  display: inline-flex; align-items: center; justify-content: center;
+  margin-bottom: 8px; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+.logo-section h1 { font-size: 18px; font-weight: 700; color: #0f172a; }
+.subtitle { font-size: 12px; color: #64748b; margin-top: 2px; }
+
+/* ── Form ── */
+.field { margin-bottom: 12px; }
+.field label { display: block; font-size: 12px; font-weight: 600; color: #475569; margin-bottom: 4px; }
+.field input {
+  width: 100%; padding: 8px 12px; border: 1.5px solid #e2e8f0; border-radius: 8px;
+  font-size: 13px; outline: none; transition: border-color 0.2s;
+}
+.field input:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); }
+
+/* ── Buttons ── */
+.btn-primary {
+  width: 100%; padding: 10px; background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff; border: none; border-radius: 8px; font-size: 13px; font-weight: 600;
+  cursor: pointer; transition: opacity 0.2s;
+}
+.btn-primary:hover { opacity: 0.9; }
+.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-secondary {
+  width: 100%; padding: 8px; background: #f1f5f9; color: #475569;
+  border: 1.5px solid #e2e8f0; border-radius: 8px; font-size: 12px; font-weight: 600;
+  cursor: pointer; transition: background 0.2s;
+}
+.btn-secondary:hover { background: #e2e8f0; }
+
+.btn-link-danger {
+  background: none; border: none; color: #ef4444; font-size: 18px;
+  cursor: pointer; padding: 4px; border-radius: 4px;
+}
+.btn-link-danger:hover { background: #fef2f2; }
+
+/* ── Header ── */
+.header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.header-left { display: flex; align-items: center; gap: 10px; }
+.logo-icon-sm {
+  width: 32px; height: 32px; background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border-radius: 8px; color: #fff; font-size: 16px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.header h2 { font-size: 14px; font-weight: 700; }
+.user-email { font-size: 11px; color: #64748b; }
+
+/* ── Profile ── */
+.profile-section { margin-bottom: 16px; }
+.profile-section label { display: block; font-size: 11px; font-weight: 600; color: #64748b; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+.profile-section select {
+  width: 100%; padding: 8px 10px; border: 1.5px solid #e2e8f0; border-radius: 8px;
+  font-size: 13px; background: #fff; outline: none; cursor: pointer;
+}
+.profile-section select:focus { border-color: #2563eb; }
+
+.profile-summary {
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 10px;
+  padding: 12px; margin-bottom: 12px; font-size: 12px; color: #475569;
+  max-height: 160px; overflow-y: auto;
+}
+.profile-summary .row { display: flex; justify-content: space-between; padding: 3px 0; }
+.profile-summary .row .label { color: #94a3b8; font-weight: 500; }
+.profile-summary .row .value { color: #1e293b; font-weight: 600; text-align: right; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+
+.actions { margin-bottom: 12px; }
+.footer-text { font-size: 11px; color: #94a3b8; text-align: center; }
+
+/* ── Error ── */
+.error-msg {
+  background: #fef2f2; border: 1px solid #fecaca; color: #dc2626;
+  padding: 8px 12px; border-radius: 8px; font-size: 12px; margin-bottom: 12px;
+}

@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: GovJobVault
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/GovJobvault
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+
+jwt:
+  secret: GovJobVaultSecretKeyMustBeAtLeast32CharactersLong2026
+  expiration: 86400000
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.govjobvault: DEBUG
